@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>TTSS</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- Core theme CSS (includes Bootstrap)-->
+
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end bg-white" id="sidebar-wrapper">
+      <div class="sidebar-heading border-bottom bg-light">Logo </div>
+      <div class="list-group list-group-flush">
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Dashboard</a>
+
+        <!-- Master Setup  menu -->
+        <div class="btn-group dropend">
+          <a class="list-group-item list-group-item-action list-group-item-light p-3 dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false" href="#!">Master Setup</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" type="button">Add Venue</a></li>
+            <li><a class="dropdown-item" type="button">Add Resorce</a></li>
+            <li><a class="dropdown-item" type="button">Add Training</a></li>
+            <li><a class="dropdown-item" type="button">Add Trainer</a></li>
+            <li><a class="dropdown-item" type="button">Add Trainee</a></li>
+            <!-- <li><a class="dropdown-item" type="button">Something else here</a></li> -->
+          </ul>
+        </div>
+
+
+        <!--Tranning Planer -->
+        <div class="btn-group dropend">
+          <a class="list-group-item list-group-item-action list-group-item-light p-3 dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false" href="#!">Training Planer</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" type="button">Create Training Planner</a></li>
+            <li><a class="dropdown-item" type="button">View Training planner</a></li>
+            <!-- <li><a class="dropdown-item" type="button">Something else here</a></li> -->
+          </ul>
+        </div>
+
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"> Training Mapping</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">View All</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
+        <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
+      </div>
+    </div>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+      <!-- Top navigation-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+          <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <!-- <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                    <path fill-rule="evenodd"
+                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#!">Profile</a>
+                  <a class="dropdown-item" href="#!">Setting</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#!">Logout</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Page content-->
+      <div class="container">
+
+        <!-- Form Start  -->
+        <div class="card mt-3">
+          <div class="card-header text-center">
+            <h2>Add Resource</h2>
+          </div>
+          <div class="text-center">
+            <div class="row mt-3">
+              <div class="col-md-4"></div>
+              <div class="form-group col-md-4 text-center">
+                <!-- <input type="text" id="TextInputvalue" class="form-control" placeholder="Disabled input"> -->
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Select Traning Management Tram</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+              </div>
+              
+            </div>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-1">
+
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="TextInputvalue" class="form-label">Venue Type</label>
+                </div>
+                <div class="form-group col-md-6">
+                  <!-- <input type="text" id="TextInputvalue" class="form-control" placeholder="Disabled input"> -->
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-1">
+
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="TextInputvalue" class="form-label">Venue Name</label>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" id="TextInputvalue" class="form-control" placeholder="Venue Name">
+                  
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-1">
+
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="TextInputvalue" class="form-label">Venue Adress</label>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" id="TextInputvalue" class="form-control" placeholder="Venue Adress">
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-1">
+
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="TextInputvalue" class="form-label">Google Location</label>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="text" id="TextInputvalue" class="form-control" placeholder="Enter Google location Link">
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-1">
+
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="TextInputvalue" class="form-label">Venue Final Capacity</label>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="number" id="TextInputvalue" class="form-control" placeholder="100">
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-md-1">
+                </div>
+              <div class="col-md-3">
+              </div>
+              <div class="col-md-6">
+                <button type="button" class="btn btn-primary btn-lg ">Submit</button>
+                <button type="button" class="btn btn-secondary btn-lg ms-5">Reset</button>
+              </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <form>
+
+
+          <!-- <fieldset disabled>
+            <legend>Disabled fieldset example</legend>
+            <div class="mb-3">
+              <label for="disabledTextInput" class="form-label">Disabled input</label>
+              <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+            </div>
+            <div class="mb-3">
+              <label for="disabledSelect" class="form-label">Disabled select menu</label>
+              <select id="disabledSelect" class="form-select">
+                <option>Disabled select</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
+                <label class="form-check-label" for="disabledFieldsetCheck">
+                  Can't check this
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </fieldset> -->
+        </form>
+
+      </div>
+
+
+      <!-- Bootstrap core JS-->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Core theme JS-->
+      <script src="js/scripts.js"></script>
+</body>
+
+</html>

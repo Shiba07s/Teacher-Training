@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>TTSS</title>
+	<!-- Favicon-->
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- xlsx.full.min.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.3/xlsx.full.min.js"></script>
+
+	<!-- Bootstrap JavaScript with Popper.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<link href="css/styles.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+	<div class="d-flex" id="wrapper">
+		<!-- Sidebar-->
+		<div class="border-end bg-white" id="sidebar-wrapper" style="font-size: 14px;">
+			<div class="sidebar-heading border-bottom bg-light">
+				<img src="./assets/loggoo.png" width="110" height="68">
+			</div>
+			<div class="list-group list-group-flush">
+				<a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"
+					onclick="showTab('tab1')">Dashboard</a>
+				<a class="list-group-item list-group-item-action list-group-item-light p-3" id="trId" href="#!"
+					onclick="showTab('tab2')">Apply Training</a>
+				<a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"
+					onclick="showTab('tab3')" id="mytrainings">My Training</a>
+				<!-- Master Setup  menu -->
+			</div>
+		</div>
+		<!-- Page content wrapper-->
+		<div id="page-content-wrapper">
+			<!-- Top navigation-->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style="width: 180%;">
+				<div class="container-fluid">
+					<div id="sidebarToggle">
+						<div style="width: 35px; height: 5px; background-color: black; margin: 6px 0;"></div>
+						<div style="width: 35px; height: 5px; background-color: black; margin: 6px 0;"></div>
+						<div style="width: 35px; height: 5px; background-color: black; margin: 6px 0;"></div>
+					</div>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation"><span>
+							class="navbar-toggler-icon"></span></button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<h1 class="nav-link ms-auto text-center text-info w-100" style="
+                          position: relative;
+                          top:-30px;
+                          right: -200px;
+                          font-size: 25px;
+                        justify-content: center;
+                        margin-top: 40px;
+ 
+                        color: blue;">Teacher Training Support System</h1> <br>
+						<h2 class="nav-link ms-auto text-center text-info w-100" style=" position: relative;
+                         top:10px;
+                         right: 250px;
+                         font-size: 25px;
+                       justify-content: center;
+                       margin-top: 40px;
+                       color:red;">Govt Of Andhra Pradesh</h2>
+
+
+						<ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+
+							<li class="nav-item dropdown">
+
+								<img src="./assets/logo.png" width="80" height="68" />
+
+
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!-- Page content-->
+			<!-- ######################### View Achedemic calender #################### -->
+			<!-- <div class="container mt-2 tab-content" id="tab1">
+
+
+                <div class=""><b>Dashboard</b>
+                </div>
+                <div class="container mt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="../static/assets/download.jpg" class="card-img-top" alt="Placeholder Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card 1</h5>
+                                        <p class="card-text">Some quick example text for Card 1.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-md-6">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="../images/3.jpg" class="card-img-top" alt="Placeholder Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card 2</h5>
+                                        <p class="card-text">Some quick example text for Card 2.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="../images/1.jpg" class="card-img-top" alt="Placeholder Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card 3</h5>
+                                        <p class="card-text">Some quick example text for Card 3.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+            
+                        <div class="col-md-6">
+                            <a href="#" class="card-link">
+                                <div class="card">
+                                    <img src="../images/2.jpg" class="card-img-top" alt="Placeholder Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Card 4</h5>
+                                        <p class="card-text">Some quick example text for Card 4.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-2">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident rem laboriosam
+                                    deserunt vel ex. Ipsum, perspiciatis. Nulla impedit animi inventore odit sit iure
+                                    ex? Praesentium aspernatur ratione autem sint error..</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Special title treatment</h5>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional
+                                    content.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nisi, alias cum
+                                    dolorum minus quidem eius ab placeat quod! Quibusdam saepe culpa accusamus, nam
+                                    ratione voluptate vel? Minus, aliquid illum?
+                                </p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>   -->
+            <div class="container mt-2 tab-content" id="tab1">
+			<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"  style="width: 180%; height: 100%;">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+						aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+						aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+						aria-label="Slide 3"></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="./assets/bg-2.webp" class="d-block w-100" 
+							alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>First slide label</h5>
+							<p>Some representative placeholder content for the first slide.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="./assets/MicrosoftTeams-image (1).png" class="d-block w-100" 
+							alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Second slide label</h5>
+							<p>Some representative placeholder content for the second slide.</p>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<img src="./assets/mobile-banner.webp" class="d-block w-100"
+							 alt="...">
+						<div class="carousel-caption d-none d-md-block">
+							<h5>Third slide label</h5>
+							<p>Some representative placeholder content for the third slide.</p>
+						</div>
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+            </div>
+
+
+
+			<!-- Training Schudule Form -->
+			<div class="container tab-content" id="tab2" style="width: 180%; font-size: 14px; display: 
+			none;">
+				<div class="mt-1"><b></b></div>
+
+				<table class="table table-hover" id="trainingTable">
+					<tbody></tbody>
+				</table>
+			</div>
+			<script>
+				$(document).ready(function () {
+					$("#trId").click(function () {
+						$.ajax({
+							type: "GET",
+							url: "/TTSS03/api/scheduledTrainings",
+							//url: "/TTSS03/api/scheduledTrainings",
+							dataType: "json",
+							success: function (data) {
+								displayTrainingData(data);
+							},
+							error: function (xhr, status, error) {
+								console.error("API request error: " + error);
+							}
+						});
+					});
+
+					function displayTrainingData(data) {
+						var trainings = data;
+						trainings.reverse();
+
+						var table = document.getElementById("trainingTable");
+
+						table.innerHTML = "<tr><th>Reference Id</th><th>Training Name</th><th>Training Mode</th><th>Description</th><th>Application start to end</th><th>Training start to end</th><th>Venue Id</th><th>venue Address</th><th>Map Location</th><th>Co-ordinater Details</th><th>Resource Type</th><th>Action</th></tr>";
+
+						for (var i = 0; i < trainings.length; i++) {
+							var training = trainings[i];
+							var row = table.insertRow(i + 1);
+
+							row.insertCell(0).innerHTML = training.ref_planner_id;
+							row.insertCell(1).innerHTML = training.tname;
+							row.insertCell(2).innerHTML = training.tmode;
+							row.insertCell(3).innerHTML = training.tdescription;
+							row.insertCell(4).innerHTML = training.apply_start_dt + "to" + training.apply_end_dt;
+							row.insertCell(5).innerHTML = training.training_start_dt + "to" + training.training_end_dt;
+							row.insertCell(6).innerHTML = training.venue_id;
+							row.insertCell(7).innerHTML = training.vaddress;
+							row.insertCell(8).innerHTML = training.maplocation;
+							row.insertCell(9).innerHTML = training.coordinatorname;
+							row.insertCell(10).innerHTML = training.resourcetype;
+
+							var applyNowButton = document.createElement("button");
+							applyNowButton.textContent = "Apply Now";
+							applyNowButton.className = "btn btn-success";
+
+							// Use a function to capture the correct ref_planner_id
+							applyNowButton.onclick = createApplyButtonClickHandler(training.ref_planner_id, training.venue_id);
+
+							var actionCell = row.insertCell(11);
+							actionCell.appendChild(applyNowButton);
+						}
+					}
+
+					// Function to create a closure and capture the correct ref_planner_id
+					function createApplyButtonClickHandler(refPlannerId, venueId) {
+						return function () {
+							// Pass both ref_planner_id and venue_id to the next page
+							redirectToApplyPage(refPlannerId, venueId);
+						};
+					}
+
+					function redirectToApplyPage(refPlannerId, venueId) {
+						var applyPageUrl = '/TTSS03/apply_traning.html';
+						//var applyPageUrl = '/TTSS03/apply_traning.html';
+						applyPageUrl += '?ref_planner_id=' + encodeURIComponent(refPlannerId);
+
+						if (venueId !== null && venueId !== undefined) {
+							applyPageUrl += '&venue_id=' + encodeURIComponent(venueId);
+						}
+
+						window.location.href = applyPageUrl;
+					}
+				});
+			</script>
+
+
+
+
+			<div class="container mt-2 tab-content" id="tab3"
+				style="display: none; width: 170%; position: relative; top: 52px;">
+				<div class="input-group mb-3" style="width: 50%;">
+					<input type="text" class="form-control" placeholder="Search..." id="searchBar">
+				</div>
+				<div class="card mt-2" style="font-size: 14px;">
+					<div class="card-header"><b>My Trainings </b></div>
+					<div class="card-body">
+						<div id="myTrainings"></div>
+						<div class="table-responsive w-100">
+							<table class="table table-hover" id="mytraining">
+								<thead>
+									<tr>
+										<th>Treasury Id</th>
+										<th>Training Name</th>
+										<th>Training Mode</th>
+										<th>Training description</th>
+										<th>Training start to end date</th>
+										<th>Venue Name</th>
+										<th>Venue Address</th>
+										<th>Venue Contact</th>
+										<th>Trainer Name</th>
+										<th>Map Location</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				$(document).ready(function () {
+					// Handle input events on the search bar
+					$("#searchBar").on("input", function () {
+						var searchText = $(this).val().toLowerCase();
+						filterTableRows(searchText);
+					});
+				});
+
+				// Function to filter table rows based on search text
+				function filterTableRows(searchText) {
+					$("#mytraining tbody tr").filter(function () {
+						var trainingName = $(this).find("td:eq(1)").text().toLowerCase(); // Index 1 is the "Training Name" column
+						$(this).toggle(trainingName.indexOf(searchText) > -1);
+					});
+				}
+			</script>
+			<script>
+				$(document).ready(function () {
+					$("#mytrainings").click(function () {
+						// Retrieve treasuryId from session storage
+						var treasuryId = sessionStorage.getItem('treasuryId');
+
+						if (!treasuryId) {
+							console.error("Treasury Id not found in session storage");
+							// Handle the case where treasuryId is not present in session storage
+							return;
+						}
+
+						$.ajax({
+							type: "GET",
+							url: "/TTSS03/api/mytrainings?treasuryId=" + treasuryId,
+							//url: "/TTSS03/api/mytrainings?treasuryId=" + treasuryId,
+							dataType: "json",
+							success: function (data) {
+								console.log(data);
+								displayTrainingData(data);
+							},
+							error: function (xhr, status, error) {
+								console.error("API request error: " + error);
+							}
+						});
+					});
+
+					function displayTrainingData(data) {
+						var trainings = data;
+						trainings.reverse();
+						var tableBody = $("#mytraining tbody");
+
+						// Clear existing rows
+						tableBody.empty();
+
+						for (var i = 0; i < trainings.length; i++) {
+							var training = trainings[i];
+							var row = $("<tr></tr>");
+
+							row.append("<td>" + training.treasuryid + "</td>");
+							row.append("<td>" + training.tname + "</td>");
+							row.append("<td>" + training.tmode + "</td>");
+							row.append("<td>" + training.tdescription + "</td>");
+							row.append("<td>" + training.startdate + " to " + training.enddate + "</td>");
+							row.append("<td>" + training.vname + "</td>");
+							row.append("<td>" + training.vaddress + "</td>");
+							row.append("<td>" + training.vcontact + "</td>");
+							row.append("<td>" + training.trainername + "</td>");
+							row.append("<td>" + training.maplocation + "</td>");
+							row.append("<td>" + training.status + "</td>");
+							tableBody.append(row);
+						}
+					}
+				});
+			</script>
+
+
+			<!--  script for show hide-->
+			<script>
+				function showTab(tabId) {
+					var tabs = document.querySelectorAll('.tab-content');
+					for (var i = 0; i < tabs.length; i++) {
+						tabs[i].style.display = 'none';
+					}
+
+					var tabToShow = document.getElementById(tabId);
+					if (tabToShow) {
+						tabToShow.style.display = 'block';
+					}
+				}
+			</script>
+
+
+			<!-- Bootstrap core JS-->
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+			<!-- Core theme JS-->
+			<script src="js/scripts.js"></script>
+</body>
+
+</html>
